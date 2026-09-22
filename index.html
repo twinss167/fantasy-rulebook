@@ -208,8 +208,36 @@ summary { cursor: pointer; font-family: var(--display); font-weight: 600; font-s
 details[open] summary { margin-bottom: 0.5rem; }
 
 footer { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(--graphite); font-size: 0.95rem; }
+
+/* Parts */
+.part-title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--graphite);
+  margin: 0 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.part-title::before { content: ""; width: 0.8rem; height: 0.8rem; background: var(--flag); flex-shrink: 0; }
+.part { margin: 0 0 5.5rem; }
+.part:last-child { margin-bottom: 0; }
+.part section { margin-bottom: 4rem; }
+.part section:last-child { margin-bottom: 0; }
+.toc .toc-part {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--graphite);
+  margin: 1.1rem 0 0.35rem;
+}
+.toc .toc-part:first-of-type { margin-top: 0; }
+.toc ol + .toc-part { margin-top: 1.1rem; }
+.toc a span { min-width: 1.5rem; }
 </style>
 </head>
+
 <body>
 
 <header class="hero">
@@ -222,48 +250,108 @@ footer { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
 <div class="wrap">
   <nav class="toc" aria-label="Contents">
     <h2>Contents</h2>
+    <p class="toc-part">League Basics</p>
     <ol>
-      <li><a href="#overview"><span>1</span>Overview &amp; Financials</a></li>
-      <li><a href="#roster"><span>2</span>Roster Composition</a></li>
-      <li><a href="#settings"><span>3</span>Scoring &amp; Settings</a></li>
-      <li><a href="#punishment"><span>4</span>Last-Place Punishment</a></li>
-      <li><a href="#corrections"><span>5</span>Commissioner Corrections</a></li>
-      <li><a href="#integrity"><span>6</span>Collusion &amp; Integrity</a></li>
-      <li><a href="#inactive"><span>7</span>Inactive Managers</a></li>
-      <li><a href="#proposals"><span>8</span>Rule Proposals &amp; Votes</a></li>
-      <li><a href="#authority"><span>9</span>Commissioner Authority</a></li>
-      <li><a href="#stats"><span>10</span>Stat Corrections</a></li>
-      <li><a href="#draft"><span>11</span>Draft</a></li>
+      <li><a href="#overview"><span>1</span>Overview &amp; Leadership</a></li>
+      <li><a href="#dues"><span>2</span>Dues &amp; Payout</a></li>
+    </ol>
+    <p class="toc-part">Building Your Team</p>
+    <ol>
+      <li><a href="#draft"><span>3</span>Draft</a></li>
+      <li><a href="#roster"><span>4</span>Roster Composition</a></li>
+      <li><a href="#transactions"><span>5</span>Transactions</a></li>
+    </ol>
+    <p class="toc-part">Weekly Play</p>
+    <ol>
+      <li><a href="#scoring"><span>6</span>Scoring &amp; Stat Corrections</a></li>
+      <li><a href="#lineups"><span>7</span>Lineups &amp; Abandoned Teams</a></li>
+    </ol>
+    <p class="toc-part">Postseason</p>
+    <ol>
+      <li><a href="#playoffs"><span>8</span>Playoffs &amp; Toilet Bowl</a></li>
+      <li><a href="#punishment"><span>9</span>Last-Place Punishment</a></li>
+    </ol>
+    <p class="toc-part">Integrity &amp; Governance</p>
+    <ol>
+      <li><a href="#integrity"><span>10</span>Collusion &amp; Integrity</a></li>
+      <li><a href="#corrections"><span>11</span>Commissioner Corrections</a></li>
+      <li><a href="#authority"><span>12</span>Authority &amp; Disputes</a></li>
+      <li><a href="#proposals"><span>13</span>Rule Proposals &amp; Votes</a></li>
     </ol>
   </nav>
 
   <main>
 
-    <section id="overview">
-      <div class="art-head"><span class="art-num">1</span><h2 class="art-title">League Overview &amp; Financials</h2></div>
-      <dl class="facts">
-        <div><dt>Platform</dt><dd>Sleeper (web and mobile)</dd></div>
-        <div><dt>Teams</dt><dd>10 managers</dd></div>
-        <div><dt>Buy-in</dt><dd>$10.00 per manager, for a total league pot of $100.00</dd></div>
-        <div><dt>Payments</dt><dd>Collected and managed through the Sleeper Dues system</dd></div>
-        <div><dt>Payout</dt><dd>Winner-take-all. The League Champion receives the full $100.00 pot.</dd></div>
-        <div><dt>Head commissioner</dt><dd>Twinss167</dd></div>
-        <div><dt>Co-commissioner</dt><dd>aversioneer</dd></div>
-      </dl>
+  <div class="part">
+    <p class="part-title">Part I: League Basics</p>
 
-      <h3><span class="clause">1.1</span>Payment Deadline</h3>
+    <section id="overview">
+      <div class="art-head"><span class="art-num">1</span><h2 class="art-title">League Overview &amp; Leadership</h2></div>
+
+      <h3><span class="clause">1.1</span>Platform &amp; Teams</h3>
+      <p>The league is played on Sleeper (web and mobile) with 10 managers.</p>
+
+      <h3><span class="clause">1.2</span>Head Commissioner</h3>
+      <p>The head commissioner is Twinss167. The head commissioner administers the league and carries out the duties assigned throughout this charter.</p>
+
+      <h3><span class="clause">1.3</span>Co-Commissioner</h3>
+      <p>The co-commissioner is aversioneer. The co-commissioner takes over head commissioner duties in the circumstances described in 1.4 and elsewhere in this charter.</p>
+
+      <h3><span class="clause">1.4</span>Conflicts of Interest</h3>
+      <p>When a decision under this charter would involve or benefit the head commissioner, the co-commissioner makes the decision instead. When a decision involves both commissioners, a league vote of uninvolved managers decides by majority.</p>
+      <p>Articles with their own specific procedures (7.3, 9.5, 9.6, 10.7, and 11.10) apply those details in addition to this rule.</p>
+    </section>
+
+    <section id="dues">
+      <div class="art-head"><span class="art-num">2</span><h2 class="art-title">Dues &amp; Payout</h2></div>
+
+      <h3><span class="clause">2.1</span>Buy-In</h3>
+      <p>The buy-in is $10.00 per manager, for a total league pot of $100.00.</p>
+
+      <h3><span class="clause">2.2</span>Payment Method</h3>
+      <p>Dues are collected and managed through the Sleeper Dues system.</p>
+
+      <h3><span class="clause">2.3</span>Payment Deadline</h3>
       <p>Dues must be paid through Sleeper no later than 11:59 PM Eastern on the day before the draft.</p>
 
-      <h3><span class="clause">1.2</span>Alternate Payment</h3>
+      <h3><span class="clause">2.4</span>Alternate Payment</h3>
       <p>If a manager cannot pay through Sleeper for a technical reason, such as their bank not connecting to the app, they must contact the head commissioner before the deadline and send the $10.00 by Zelle. The head commissioner will then pay their dues in Sleeper. Contacting the head commissioner before the deadline counts as paying on time.</p>
 
-      <h3><span class="clause">1.3</span>Late Payment</h3>
+      <h3><span class="clause">2.5</span>Late Payment</h3>
       <p>A manager who has not paid by the deadline is fined $5.00, which is added to the league pot. Until their dues and fine are paid in full, they may not make waiver claims, free agent additions, or trades.</p>
+
+      <h3><span class="clause">2.6</span>Payout</h3>
+      <p>The league is winner-take-all. The League Champion receives the full pot. Winnings forfeited under 10.8 are awarded to the runner-up.</p>
+    </section>
+  </div>
+
+  <div class="part">
+    <p class="part-title">Part II: Building Your Team</p>
+
+    <section id="draft">
+      <div class="art-head"><span class="art-num">3</span><h2 class="art-title">Draft</h2></div>
+
+      <h3><span class="clause">3.1</span>Draft Order</h3>
+      <p>The inaugural 2026 draft order was randomized. Every season after that, the draft order is the reverse of the previous season's final standings, with last place drafting first. The Toilet Bowl loser picks 1st, followed by the rest of the Toilet Bowl teams by finish, then the playoff teams by finish, with the champion picking 10th.</p>
+
+      <h3><span class="clause">3.2</span>Format</h3>
+      <p>The draft is a snake draft. The pick order reverses each round, so the manager who picks last in one round picks first in the next.</p>
+
+      <h3><span class="clause">3.3</span>Absent Managers</h3>
+      <p>If a manager is not present when it is their turn, Sleeper's autodraft makes their picks. Picks made by autodraft stand.</p>
+
+      <h3><span class="clause">3.4</span>Draft Pick Trading</h3>
+      <p>Draft picks may never be traded, in any season, for the integrity of the league.</p>
     </section>
 
     <section id="roster">
-      <div class="art-head"><span class="art-num">2</span><h2 class="art-title">Roster Composition</h2></div>
+      <div class="art-head"><span class="art-num">4</span><h2 class="art-title">Roster Composition</h2></div>
+
+      <h3><span class="clause">4.1</span>Roster Size</h3>
       <p>Each team carries 15 roster spots (9 starters and 6 bench) plus 1 dedicated Injured Reserve slot.</p>
+
+      <h3><span class="clause">4.2</span>Starting Lineup</h3>
+      <p>Each week, a team starts the following positions:</p>
       <div class="lineup" role="list">
         <div class="slot" role="listitem"><b>QB</b><span>1 Quarterback</span></div>
         <div class="slot" role="listitem"><b>RB</b><span>2 Running Backs</span></div>
@@ -275,70 +363,209 @@ footer { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
         <div class="slot bench" role="listitem"><b>BN</b><span>6 Bench</span></div>
         <div class="slot ir" role="listitem"><b>IR</b><span>1 Injured Reserve</span></div>
       </div>
-      <p class="lineup-note">Solid tiles are weekly starters. The dashed tile is the bench; the outlined tile is IR and does not count toward the 15 roster spots.</p>
+
+      <h3><span class="clause">4.3</span>Bench &amp; Injured Reserve</h3>
+      <p>Each team has 6 bench spots, shown as the dashed tile above. The IR slot, shown as the outlined tile, does not count toward the 15 roster spots.</p>
     </section>
 
-    <section id="settings">
-      <div class="art-head"><span class="art-num">3</span><h2 class="art-title">Scoring &amp; League Settings</h2></div>
-      <dl class="facts">
-        <div><dt>Scoring</dt><dd>Half-PPR (0.5 points per reception)</dd></div>
-        <div><dt>Waivers</dt><dd>Free Agent Acquisition Budget (FAAB)</dd></div>
-        <div><dt>FAAB budget</dt><dd>$100.00 per manager for the full season</dd></div>
-        <div><dt>Waiver processing</dt><dd>Waivers clear every Wednesday at 3:00 AM AST</dd></div>
-        <div><dt>Trade deadline</dt><dd>Week 11</dd></div>
-        <div><dt>Trade review</dt><dd>Trades are not subject to head commissioner review or league veto and process once both managers accept. Trades that violate Article 6 may still be reversed under that article.</dd></div>
-        <div><dt>Draft picks</dt><dd>Draft picks may not be traded (see 11.4)</dd></div>
-        <div><dt>Playoffs</dt><dd>6-team bracket, Weeks 15 through 17</dd></div>
-        <div><dt>Toilet Bowl</dt><dd>Bottom 4 teams in the standings</dd></div>
-      </dl>
+    <section id="transactions">
+      <div class="art-head"><span class="art-num">5</span><h2 class="art-title">Transactions</h2></div>
+
+      <h3><span class="clause">5.1</span>Waivers</h3>
+      <p>Waivers use a Free Agent Acquisition Budget (FAAB) system.</p>
+
+      <h3><span class="clause">5.2</span>FAAB Budget</h3>
+      <p>Each manager receives $100.00 in FAAB for the full season.</p>
+
+      <h3><span class="clause">5.3</span>Waiver Processing</h3>
+      <p>Waivers clear every Wednesday at 3:00 AM AST.</p>
+
+      <h3><span class="clause">5.4</span>Trade Review</h3>
+      <p>Trades are not subject to head commissioner review or league veto and process once both managers accept. Trades that violate Article 10 may still be reversed under that article. Draft picks may not be included in any trade (3.4).</p>
+
+      <h3><span class="clause">5.5</span>Trade Deadline</h3>
+      <p>The trade deadline is Week 11.</p>
+    </section>
+  </div>
+
+  <div class="part">
+    <p class="part-title">Part III: Weekly Play</p>
+
+    <section id="scoring">
+      <div class="art-head"><span class="art-num">6</span><h2 class="art-title">Scoring &amp; Stat Corrections</h2></div>
+
+      <h3><span class="clause">6.1</span>Scoring System</h3>
+      <p>The league uses Half-PPR scoring (0.5 points per reception).</p>
+
+      <h3><span class="clause">6.2</span>Official Stats</h3>
+      <p>All scoring is based on Sleeper's official stats, including any stat corrections Sleeper applies.</p>
+
+      <h3><span class="clause">6.3</span>Finality</h3>
+      <p>A matchup result is final once Sleeper finalizes it. Results changed by an official stat correction before finalization stand, even if they change the winner.</p>
+
+      <h3><span class="clause">6.4</span>No Manual Adjustments</h3>
+      <p>The head commissioner will not manually adjust scores, except to fix an administrative error under 11.1.2.</p>
+    </section>
+
+    <section id="lineups">
+      <div class="art-head"><span class="art-num">7</span><h2 class="art-title">Lineups &amp; Abandoned Teams</h2></div>
+
+      <h3><span class="clause">7.1</span>Lineup Obligation</h3>
+      <p>Every manager must set a legal lineup each week. Starting players known to be on bye, inactive, or out, or leaving slots empty, is a failure to meet this obligation.</p>
+
+      <h3><span class="clause">7.2</span>Abandonment</h3>
+      <p>A team is considered abandoned when its manager fails to meet 7.1 for two consecutive weeks, or does not respond to the head commissioner within 72 hours of being contacted about their team.</p>
+
+      <h3><span class="clause">7.3</span>Commissioner Management</h3>
+      <p>For the sake of league integrity, the head commissioner will set the lineup of an abandoned team. If the abandoned team is playing the head commissioner that week, the co-commissioner (aversioneer) sets its lineup instead, consistent with 1.4.</p>
+      <p>The commissioner managing the team:</p>
+      <ul>
+        <li>Sets only a legal, reasonable lineup from the existing roster.</li>
+        <li>Does not make trades.</li>
+        <li>Makes waiver moves only to replace players who are out for the season.</li>
+      </ul>
+
+      <h3><span class="clause">7.4</span>Relationship to Corrections</h3>
+      <p>Commissioner management of an abandoned team is not a retroactive correction and does not create eligibility under Article 11. A manager who simply forgot to set a lineup is not abandoned and is not covered by this article.</p>
+
+      <h3><span class="clause">7.5</span>Resuming Control</h3>
+      <p>A manager may resume control of their team at any time by contacting the head commissioner.</p>
+    </section>
+  </div>
+
+  <div class="part">
+    <p class="part-title">Part IV: Postseason</p>
+
+    <section id="playoffs">
+      <div class="art-head"><span class="art-num">8</span><h2 class="art-title">Playoffs &amp; Toilet Bowl</h2></div>
+
+      <h3><span class="clause">8.1</span>Playoffs</h3>
+      <p>The top 6 teams advance to a playoff bracket played in Weeks 15 through 17.</p>
+
+      <h3><span class="clause">8.2</span>Toilet Bowl</h3>
+      <p>The bottom 4 teams in the standings play in the Toilet Bowl bracket, which determines last place under 9.1.</p>
     </section>
 
     <section id="punishment">
-      <div class="art-head"><span class="art-num">4</span><h2 class="art-title">Last-Place Punishment</h2></div>
-      <h3><span class="clause">4.1</span>Determination</h3>
-      <p>Last place is determined strictly by the Toilet Bowl bracket, made up of the bottom 4 teams in the standings. The manager who finishes at the bottom of that bracket is the league's overall last-place manager and must complete the punishment.</p>
+      <div class="art-head"><span class="art-num">9</span><h2 class="art-title">Last-Place Punishment</h2></div>
+
+      <h3><span class="clause">9.1</span>Determination</h3>
+      <p>Last place is determined strictly by the Toilet Bowl bracket (8.2). The manager who finishes at the bottom of that bracket is the league's overall last-place manager and must complete the punishment.</p>
+
       <div class="flag">
-        <h3><span class="clause" style="color:inherit">4.2</span>The Punishment</h3>
+        <h3><span class="clause" style="color:inherit">9.2</span>The Punishment</h3>
         <p>The last-place manager must prepare and consume one slice of Aunt Myrna's Party Cheese Salad.</p>
       </div>
-      <h3><span class="clause">4.3</span>Commissioner Clause</h3>
+
+      <h3><span class="clause">9.3</span>Slice Size</h3>
       <p>The slice must be deemed sizable enough by the head commissioner to satisfy the requirement.</p>
 
-      <h3><span class="clause">4.4</span>Deadline</h3>
+      <h3><span class="clause">9.4</span>Deadline</h3>
       <p>The punishment must be completed by February 1 following the season.</p>
 
-      <h3><span class="clause">4.5</span>Deferral</h3>
-      <p>The last-place manager may request a deferral when circumstances prevent them from completing the punishment by the deadline. Deferral requests must be made before February 1. Any circumstance may be presented; approval is decided under 4.6.</p>
+      <h3><span class="clause">9.5</span>Deferral</h3>
+      <p>The last-place manager may request a deferral when circumstances prevent them from completing the punishment by the deadline. Deferral requests must be made before February 1. Any circumstance may be presented; approval is decided under 9.6.</p>
       <p>Because qualifying circumstances depend on the punishment, pre-approved examples are set each season. For the current season, the following are pre-approved:</p>
       <ul>
         <li>dirtypenischeese being deployed with the United States Navy.</li>
         <li>Twinss167 being outside the United States, making the required ingredients unavailable.</li>
       </ul>
-      <p>When a deferral is approved, the head commissioner sets the date by which the punishment must be completed. If the head commissioner is the last-place manager, the co-commissioner sets that date and holds the head commissioner accountable to it. Failure to complete the punishment by the deferral date puts 4.8 into effect.</p>
+      <p>When a deferral is approved, the head commissioner sets the date by which the punishment must be completed. If the head commissioner is the last-place manager, the co-commissioner sets that date and holds the head commissioner accountable to it. Failure to complete the punishment by the deferral date puts 9.8 into effect.</p>
 
-      <h3><span class="clause">4.6</span>Deciding Deferrals</h3>
+      <h3><span class="clause">9.6</span>Deciding Deferrals</h3>
       <p>The head commissioner approves or denies deferral requests. If the head commissioner is the last-place manager, the co-commissioner decides.</p>
 
-      <h3><span class="clause">4.7</span>Proof of Completion</h3>
-      <p>Completion must be verified by a video posted to the league Discord clearly showing the manager consuming the full slice. For the current season, the manager must also provide evidence of preparing the Party Cheese Salad, such as photos or a video recording of the process. The head commissioner (or co-commissioner under 4.6) confirms whether the proof satisfies the requirement.</p>
+      <h3><span class="clause">9.7</span>Proof of Completion</h3>
+      <p>Completion must be verified by a video posted to the league Discord clearly showing the manager consuming the full slice. For the current season, the manager must also provide evidence of preparing the Party Cheese Salad, such as photos or a video recording of the process. The head commissioner (or co-commissioner under 9.6) confirms whether the proof satisfies the requirement.</p>
 
-      <h3><span class="clause">4.8</span>Failure to Complete</h3>
-      <p>If the punishment is not completed by February 1, or by the deferral date set under 4.5, the following apply in order:</p>
+      <h3><span class="clause">9.8</span>Failure to Complete</h3>
+      <p>If the punishment is not completed by February 1, or by the deferral date set under 9.5, the following apply in order:</p>
       <ol class="plain">
         <li><strong>Grace period:</strong> the manager has 14 additional days to complete the punishment, and a public reminder is posted to the league Discord.</li>
         <li><strong>Double buy-in:</strong> if the grace period ends without completion, the manager's buy-in for the following season is $20.00, with the extra $10.00 added to the pot. The punishment remains owed.</li>
         <li><strong>Removal:</strong> a manager who refuses outright, or who has not completed the punishment by the next season's draft, is removed from the league and forfeits any dues paid.</li>
       </ol>
     </section>
+  </div>
+
+  <div class="part">
+    <p class="part-title">Part V: Integrity &amp; Governance</p>
+
+    <section id="integrity">
+      <div class="art-head"><span class="art-num">10</span><h2 class="art-title">Collusion &amp; Competitive Integrity</h2></div>
+
+      <h3><span class="clause">10.1</span>Purpose</h3>
+      <p>Every manager is expected to manage their team with the goal of maximizing their own team's success. This rule prohibits conduct that manipulates outcomes for the benefit of another team or against the integrity of the league.</p>
+
+      <h3><span class="clause">10.2</span>Prohibited Conduct</h3>
+      <p>The following are violations:</p>
+      <ul>
+        <li><strong>Collusion:</strong> any agreement between two or more managers to benefit one team at the expense of league integrity. This includes trades made to help another team rather than one's own, agreements to split or share winnings, "loaner" trades where players are to be returned later, agreements to start or bench players to influence a matchup, and coordinated waiver bids meant to steer or block a player.</li>
+        <li><strong>Tanking:</strong> intentionally weakening one's own lineup to lose, including deliberately starting players known to be on bye, inactive, or out, or leaving slots empty. Because draft order is based on standings (3.1), losing on purpose to improve draft position is tanking.</li>
+        <li><strong>Roster dumping:</strong> dropping or trading away players for the purpose of benefiting a specific team.</li>
+        <li><strong>Shared control:</strong> allowing another manager to access or manage your team.</li>
+      </ul>
+
+      <h3><span class="clause">10.3</span>Not a Violation</h3>
+      <p>The following do not by themselves constitute a violation:</p>
+      <ul>
+        <li>A trade that appears lopsided.</li>
+        <li>Poor decisions, bad luck, or disagreements over player value.</li>
+        <li>Benching a player based on a good-faith judgment.</li>
+        <li>Open negotiation, trade offers, or trash talk.</li>
+      </ul>
+      <p class="note">Because trades are not reviewed (5.4), a claim under this article requires evidence of an agreement or intent, not just an unfavorable result. A trade is not evidence of collusion simply because other managers dislike it.</p>
+
+      <h3><span class="clause">10.4</span>Reporting</h3>
+      <p>Any manager may report a suspected violation to the head commissioner. Reports should be made promptly. A report made after the season's payout can only result in penalties applied to future seasons.</p>
+
+      <h3><span class="clause">10.5</span>Evidence</h3>
+      <details>
+        <summary>Examples of supporting evidence</summary>
+        <ul>
+          <li>Messages, Discord posts, or screenshots showing an agreement or intent.</li>
+          <li>Transaction or trade history showing a pattern that benefits a specific team.</li>
+          <li>Trade terms that only make sense with a side agreement.</li>
+          <li>Lineup history showing repeated starts of players known to be unavailable.</li>
+          <li>Other independently verifiable evidence.</li>
+        </ul>
+      </details>
+      <p>An explanation being plausible, or a trade being lopsided, is not enough on its own.</p>
+
+      <h3><span class="clause">10.6</span>Response</h3>
+      <p>The accused manager must be notified and given a reasonable opportunity to respond before a ruling is made.</p>
+
+      <h3><span class="clause">10.7</span>Determination</h3>
+      <p>The head commissioner decides based on the evidence, and that decision is final, subject to 1.4. Under 1.4:</p>
+      <ul>
+        <li>If the head commissioner is accused, is the reporting party, or is a party to the transaction in question, the co-commissioner decides.</li>
+        <li>If both commissioners are involved, a league vote is held among uninvolved managers and decided by majority.</li>
+      </ul>
+      <p>The same standards apply regardless of which manager is involved, consistent with 11.11.</p>
+
+      <h3><span class="clause">10.8</span>Penalties</h3>
+      <p>Penalties are scaled to the severity of the violation and may include one or more of the following:</p>
+      <ul>
+        <li>A formal warning.</li>
+        <li>Reversal of the offending transactions.</li>
+        <li>Reduction or forfeiture of remaining FAAB.</li>
+        <li>Last pick in the first round of the next season's draft.</li>
+        <li>Forfeiture of any winnings, which are awarded to the runner-up.</li>
+        <li>Removal from the league, with dues forfeited.</li>
+      </ul>
+
+      <h3><span class="clause">10.9</span>Transparency</h3>
+      <p>Every ruling is posted to the league Discord with a summary of the evidence, the provision that applies, and the penalty imposed. Rulings may be reconsidered only under 12.3.</p>
+    </section>
 
     <section id="corrections">
-      <div class="art-head"><span class="art-num">5</span><h2 class="art-title">Commissioner Lineup Corrections</h2></div>
+      <div class="art-head"><span class="art-num">11</span><h2 class="art-title">Commissioner Lineup Corrections</h2></div>
       <p>The head commissioner may make a retroactive lineup or transaction correction when there is a reasonable and objectively supportable basis to conclude that the action recorded by Sleeper does not accurately reflect the action that should have been taken under the circumstances.</p>
       <p>Corrections exist to fix <strong>errors or exceptional circumstances</strong>. They are not an additional opportunity to make decisions after deadlines have passed or after new information has become available. Each request must independently satisfy the applicable standard below.</p>
 
-      <h3><span class="clause">5.1</span>Qualifying Circumstances</h3>
+      <h3><span class="clause">11.1</span>Qualifying Circumstances</h3>
 
-      <h4><span class="clause">5.1.1</span>Platform or Technical Error</h4>
+      <h4><span class="clause">11.1.1</span>Platform or Technical Error</h4>
       <p>A correction may be made when a documented Sleeper malfunction, roster-locking error, scoring error, transaction-processing error, or other technical issue prevented the intended lineup or transaction from being entered or recorded correctly.</p>
       <details>
         <summary>Examples of supporting evidence</summary>
@@ -353,7 +580,7 @@ footer { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
       </details>
       <p>Evidence that the manager actually attempted the action before the deadline generally receives the greatest weight. The absence of a screenshot does not automatically disqualify a legitimate technical issue if other qualifying evidence exists.</p>
 
-      <h4><span class="clause">5.1.2</span>League or Head Commissioner Administrative Error</h4>
+      <h4><span class="clause">11.1.2</span>League or Head Commissioner Administrative Error</h4>
       <p>A correction may be made when an <strong>objective administrative error</strong> involving league settings, roster administration, scoring, transaction administration, or another head commissioner action resulted in an incorrect lineup, transaction, or matchup result. This also applies when the head commissioner fails to implement a <strong>clearly documented league rule, league vote, or prior league agreement</strong>.</p>
       <details>
         <summary>Examples of qualifying errors</summary>
@@ -377,7 +604,7 @@ footer { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
       </details>
       <p class="note">Disagreement with the head commissioner's judgment, interpretation, or discretionary ruling is not, by itself, an administrative error. A correction under this clause must be based on an objective mistake or a failure to implement a clearly established league decision.</p>
 
-      <h4><span class="clause">5.1.3</span>Documented Pre-Kickoff Intent</h4>
+      <h4><span class="clause">11.1.3</span>Documented Pre-Kickoff Intent</h4>
       <p>A correction may be made when credible evidence establishes that the manager had already determined or communicated a specific intended lineup before the relevant player's game began, but the lineup was not recorded correctly.</p>
       <details>
         <summary>Examples of supporting evidence</summary>
@@ -390,9 +617,9 @@ footer { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
           <li>Other contemporaneous evidence establishing pre-kickoff intent.</li>
         </ul>
       </details>
-      <p>Evidence created after kickoff may be considered only as permitted by the circumstance-specific standard in 5.6. Evidence created solely after kickoff to establish a previously uncommunicated intention generally carries substantially less weight. This clause exists to reconstruct a decision that was already made, not to allow a new decision after seeing later information.</p>
+      <p>Evidence created after kickoff may be considered only as permitted by the circumstance-specific standard in 11.6. Evidence created solely after kickoff to establish a previously uncommunicated intention generally carries substantially less weight. This clause exists to reconstruct a decision that was already made, not to allow a new decision after seeing later information.</p>
 
-      <h4><span class="clause">5.1.4</span>Exceptional Loss of Connectivity (Special Provision for dirtypenischeese)</h4>
+      <h4><span class="clause">11.1.4</span>Exceptional Loss of Connectivity (Special Provision for dirtypenischeese)</h4>
       <p>Because owner <strong>dirtypenischeese is deployed with the United States Navy</strong>, the league recognizes that internet access aboard a deployed naval vessel may be outside the owner's control and may be interrupted without notice. Accordingly, <strong>dirtypenischeese may request a retroactive lineup or transaction correction when a loss of shipboard internet connectivity prevented an otherwise permissible action from being completed before the relevant deadline.</strong></p>
       <p>For this provision:</p>
       <ul>
@@ -415,7 +642,7 @@ footer { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
       <p>The head commissioner may consider all available evidence when determining whether the claimed intended action is credible.</p>
       <p class="note">This provision is not a standing right to change lineups or make transactions after deadlines. It covers one specific circumstance in which internet access may be involuntarily removed without warning. It does not apply because dirtypenischeese was busy, forgot to set a lineup, failed to check Sleeper, or otherwise voluntarily failed to take an available action.</p>
 
-      <h3><span class="clause">5.2</span>Non-Qualifying Circumstances</h3>
+      <h3><span class="clause">11.2</span>Non-Qualifying Circumstances</h3>
       <p>A retroactive correction will generally not be granted solely because a manager:</p>
       <ul>
         <li>Forgot to set or change their lineup.</li>
@@ -429,14 +656,14 @@ footer { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
       </ul>
       <p>Ordinary lack of internet access does not automatically qualify for any manager other than <strong>dirtypenischeese</strong>.</p>
 
-      <h3><span class="clause">5.3</span>No Weekly "Free Change"</h3>
+      <h3><span class="clause">11.3</span>No Weekly "Free Change"</h3>
       <p>There is <strong>no guaranteed number of corrections</strong> available to any team per week or per season. This rule does not grant a free lineup change, mulligan, or additional deadline. Each request must independently satisfy a qualifying circumstance. Unused corrections cannot be reserved, accumulated, or carried over, and repeated failures to set a lineup do not create additional eligibility for commissioner intervention.</p>
 
-      <h3><span class="clause">5.4</span>Multiple Changes From the Same Event</h3>
+      <h3><span class="clause">11.4</span>Multiple Changes From the Same Event</h3>
       <p>A correction may include <strong>multiple lineup or transaction changes</strong> when all of them resulted from the same qualifying event. For example, if a documented technical problem prevented several intended changes at once, those changes may be corrected together if the evidence supports them.</p>
       <p>A single qualifying event cannot be used to justify unrelated changes that were not part of the original intended action. Each requested change must still meet the applicable eligibility and evidence standards.</p>
 
-      <h3><span class="clause">5.5</span>Player and Transaction Eligibility</h3>
+      <h3><span class="clause">11.5</span>Player and Transaction Eligibility</h3>
       <p>A retroactive correction does not override normal roster or position eligibility. For a lineup correction, the replacement player must have:</p>
       <ul>
         <li>Legally been on the manager's roster at the relevant time; and</li>
@@ -451,7 +678,7 @@ footer { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
       </ul>
       <p>The head commissioner decides case by case whether a retroactive transaction correction is justified. A transaction correction can never create an action that would not have been legal when it allegedly should have occurred.</p>
 
-      <h3><span class="clause">5.6</span>Evidence Standard</h3>
+      <h3><span class="clause">11.6</span>Evidence Standard</h3>
       <p>The evidence standard is <strong>circumstance-specific</strong> rather than identical for every type of correction.</p>
       <dl class="facts">
         <div><dt>Technical or platform errors</dt><dd>The strongest evidence shows the manager attempted the action before the deadline and was prevented by a platform problem. Other independently verifiable evidence may also be considered.</dd></div>
@@ -461,7 +688,7 @@ footer { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
         <div><dt>Retroactive transactions</dt><dd>The manager must establish both (1) a qualifying circumstance that prevented the action and (2) the intended transaction. The transaction must also have been legal at the relevant time.</dd></div>
       </dl>
 
-      <h3><span class="clause">5.7</span>Anti-Hindsight Rule</h3>
+      <h3><span class="clause">11.7</span>Anti-Hindsight Rule</h3>
       <p>How post-kickoff or post-deadline information is treated depends on the type of correction:</p>
       <ul>
         <li><strong>Technical or administrative corrections:</strong> later evidence may be used to establish what error occurred.</li>
@@ -471,7 +698,7 @@ footer { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
       </ul>
       <p>No correction may be granted solely because a player performed well or poorly after the deadline, or because later information makes a different decision look better. A correction restores an action that should have occurred; it is <strong>not a chance to make a better decision in hindsight.</strong></p>
 
-      <h3><span class="clause">5.8</span>Other Evidence</h3>
+      <h3><span class="clause">11.8</span>Other Evidence</h3>
       <p>"Other reasonable evidence" is not a universal catch-all. The type of additional evidence that may be considered depends on the circumstance:</p>
       <ul>
         <li><strong>Technical or platform errors:</strong> other independently verifiable evidence.</li>
@@ -482,201 +709,75 @@ footer { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem 3rem; color: var(-
       </ul>
       <p>Evidence does not qualify merely because the head commissioner finds the manager's explanation plausible.</p>
 
-      <h3><span class="clause">5.9</span>Request Deadline</h3>
-      <p>A correction must be requested <strong>before the fantasy week officially ends: Tuesday at 11:59 PM Eastern</strong>. After that, no new request may be opened for that week, regardless of whether the reason for the correction was discovered before or after the affected player's game. The deadline ensures requests are raised while the week is still active and before the passage of time makes reconstruction unnecessarily difficult.</p>
+      <h3><span class="clause">11.9</span>Request Deadline</h3>
+      <p>A correction must be requested <strong>before the fantasy week officially ends: Tuesday at 11:59 PM Eastern</strong>. After that, no new request may be opened for that week, regardless of whether the reason for the correction was discovered before or after the affected player's game. The deadline ensures requests are raised while the week is still active and before the passage of time makes reconstruction unnecessarily difficult. A denied request may be reconsidered only under 12.3.</p>
 
-      <h3><span class="clause">5.10</span>Reconsideration of a Denied Request</h3>
-      <p>A denied request may be reconsidered only when <strong>genuinely new and materially relevant evidence</strong> becomes available. The following are not new evidence:</p>
-      <ul>
-        <li>Repeating the original argument.</li>
-        <li>Rephrasing the same explanation.</li>
-        <li>Providing additional speculation.</li>
-        <li>Presenting evidence that was already available when the original request was considered.</li>
-        <li>Pointing to a player's subsequent performance.</li>
-      </ul>
-      <p>New evidence must materially affect the factual basis on which the original decision was made.</p>
-
-      <h3><span class="clause">5.11</span>Head Commissioner as a Benefiting Manager</h3>
-      <p>If a proposed correction would benefit the head commissioner's own team, the head commissioner may <strong>not approve it unilaterally</strong>.</p>
+      <h3><span class="clause">11.10</span>Head Commissioner as a Benefiting Manager</h3>
+      <p>If a proposed correction would benefit the head commissioner's own team, the head commissioner may <strong>not approve it unilaterally</strong>. Consistent with 1.4:</p>
       <ul>
         <li>The head commissioner must disclose the circumstances and proposed correction to the co-commissioner, and takes no part in the decision beyond providing the relevant facts and evidence.</li>
         <li>The co-commissioner decides whether the correction is made, applying the same standards as any other request.</li>
         <li>If the co-commissioner is the opponent in the affected matchup or would otherwise benefit from the decision, a league vote is held instead. The head commissioner and the opponent in the affected matchup are excluded from the vote, and a <strong>majority of eligible, non-affected managers</strong> must approve the correction before it is made.</li>
       </ul>
 
-      <h3><span class="clause">5.12</span>Consistency</h3>
+      <h3><span class="clause">11.11</span>Consistency</h3>
       <p>The same standards apply regardless of which manager benefits. A circumstance that would not qualify for one manager will not qualify for another simply because that manager is the head commissioner, the co-commissioner, a party related to either commissioner, or any other favored member of the league.</p>
-      <p>The dirtypenischeese provision (5.1.4) is an explicit exception based on the unique and involuntary nature of connectivity loss while deployed with the United States Navy. It does not establish a general rule that ordinary lack of Wi-Fi qualifies for a correction.</p>
+      <p>The dirtypenischeese provision (11.1.4) is an explicit exception based on the unique and involuntary nature of connectivity loss while deployed with the United States Navy. It does not establish a general rule that ordinary lack of Wi-Fi qualifies for a correction.</p>
 
-      <h3><span class="clause">5.13</span>Transparency</h3>
-      <p>All retroactive corrections remain visible through Sleeper's commissioner-action notifications. For each one, the head commissioner (or the co-commissioner, for a decision made under 5.11) should briefly explain:</p>
+      <h3><span class="clause">11.12</span>Transparency</h3>
+      <p>All retroactive corrections remain visible through Sleeper's commissioner-action notifications. For each one, the head commissioner (or the co-commissioner, for a decision made under 11.10) should briefly explain:</p>
       <ol class="plain">
         <li>What correction was made;</li>
         <li>The circumstance that justified it; and</li>
         <li>The provision of this rule that applies.</li>
       </ol>
-      <p>For corrections benefiting the head commissioner, the explanation must also state whether the co-commissioner or a league vote decided the request under 5.11, and the result.</p>
+      <p>For corrections benefiting the head commissioner, the explanation must also state whether the co-commissioner or a league vote decided the request under 11.10, and the result.</p>
       <p>This rule exists to provide a predictable, transparent process for correcting legitimate errors and exceptional circumstances, while preventing retroactive changes from becoming a routine way to gain an advantage after deadlines have passed.</p>
     </section>
 
-    <section id="integrity">
-      <div class="art-head"><span class="art-num">6</span><h2 class="art-title">Collusion &amp; Competitive Integrity</h2></div>
+    <section id="authority">
+      <div class="art-head"><span class="art-num">12</span><h2 class="art-title">Commissioner Authority &amp; Disputes</h2></div>
 
-      <h3><span class="clause">6.1</span>Purpose</h3>
-      <p>Every manager is expected to manage their team with the goal of maximizing their own team's success. This rule prohibits conduct that manipulates outcomes for the benefit of another team or against the integrity of the league.</p>
+      <h3><span class="clause">12.1</span>General Authority</h3>
+      <p>The head commissioner has authority to rule on any situation not addressed by this charter. Rulings must be consistent with the charter's intent and applied equally to all managers. Conflicts of interest are handled under 1.4.</p>
 
-      <h3><span class="clause">6.2</span>Prohibited Conduct</h3>
-      <p>The following are violations:</p>
+      <h3><span class="clause">12.2</span>Disputes</h3>
+      <p>A manager who disagrees with a ruling may raise it with the head commissioner within 7 days. A ruling may be reconsidered only under 12.3. Disagreement with a discretionary ruling does not by itself justify reversal.</p>
+
+      <h3><span class="clause">12.3</span>Reconsideration</h3>
+      <p>A denied request or ruling under Article 10, Article 11, or this article may be reconsidered only when <strong>genuinely new and materially relevant evidence</strong> becomes available. The following are not new evidence:</p>
       <ul>
-        <li><strong>Collusion:</strong> any agreement between two or more managers to benefit one team at the expense of league integrity. This includes trades made to help another team rather than one's own, agreements to split or share winnings, "loaner" trades where players are to be returned later, agreements to start or bench players to influence a matchup, and coordinated waiver bids meant to steer or block a player.</li>
-        <li><strong>Tanking:</strong> intentionally weakening one's own lineup to lose, including deliberately starting players known to be on bye, inactive, or out, or leaving slots empty. Because draft order is based on standings (11.1), losing on purpose to improve draft position is tanking.</li>
-        <li><strong>Roster dumping:</strong> dropping or trading away players for the purpose of benefiting a specific team.</li>
-        <li><strong>Shared control:</strong> allowing another manager to access or manage your team.</li>
+        <li>Repeating the original argument.</li>
+        <li>Rephrasing the same explanation.</li>
+        <li>Providing additional speculation.</li>
+        <li>Presenting evidence that was already available when the original request or ruling was considered.</li>
+        <li>Pointing to a player's subsequent performance.</li>
       </ul>
+      <p>New evidence must materially affect the factual basis on which the original decision was made.</p>
 
-      <h3><span class="clause">6.3</span>Not a Violation</h3>
-      <p>The following do not by themselves constitute a violation:</p>
-      <ul>
-        <li>A trade that appears lopsided.</li>
-        <li>Poor decisions, bad luck, or disagreements over player value.</li>
-        <li>Benching a player based on a good-faith judgment.</li>
-        <li>Open negotiation, trade offers, or trash talk.</li>
-      </ul>
-      <p class="note">Because trades are not reviewed, a claim under this article requires evidence of an agreement or intent, not just an unfavorable result. A trade is not evidence of collusion simply because other managers dislike it.</p>
-
-      <h3><span class="clause">6.4</span>Reporting</h3>
-      <p>Any manager may report a suspected violation to the head commissioner. Reports should be made promptly. A report made after the season's payout can only result in penalties applied to future seasons.</p>
-
-      <h3><span class="clause">6.5</span>Evidence</h3>
-      <details>
-        <summary>Examples of supporting evidence</summary>
-        <ul>
-          <li>Messages, Discord posts, or screenshots showing an agreement or intent.</li>
-          <li>Transaction or trade history showing a pattern that benefits a specific team.</li>
-          <li>Trade terms that only make sense with a side agreement.</li>
-          <li>Lineup history showing repeated starts of players known to be unavailable.</li>
-          <li>Other independently verifiable evidence.</li>
-        </ul>
-      </details>
-      <p>An explanation being plausible, or a trade being lopsided, is not enough on its own.</p>
-
-      <h3><span class="clause">6.6</span>Response</h3>
-      <p>The accused manager must be notified and given a reasonable opportunity to respond before a ruling is made.</p>
-
-      <h3><span class="clause">6.7</span>Determination</h3>
-      <p>The head commissioner decides based on the evidence, and that decision is final, except in the following conflicts:</p>
-      <ul>
-        <li>If the head commissioner is accused, is the reporting party, or is a party to the transaction in question, the co-commissioner decides.</li>
-        <li>If both commissioners are involved, a league vote is held among uninvolved managers and decided by majority.</li>
-      </ul>
-      <p>The same standards apply regardless of which manager is involved, consistent with 5.12.</p>
-
-      <h3><span class="clause">6.8</span>Penalties</h3>
-      <p>Penalties are scaled to the severity of the violation and may include one or more of the following:</p>
-      <ul>
-        <li>A formal warning.</li>
-        <li>Reversal of the offending transactions.</li>
-        <li>Reduction or forfeiture of remaining FAAB.</li>
-        <li>Last pick in the first round of the next season's draft.</li>
-        <li>Forfeiture of any winnings, which are awarded to the runner-up.</li>
-        <li>Removal from the league, with dues forfeited.</li>
-      </ul>
-
-      <h3><span class="clause">6.9</span>Transparency</h3>
-      <p>Every ruling is posted to the league Discord with a summary of the evidence, the provision that applies, and the penalty imposed.</p>
-
-      <h3><span class="clause">6.10</span>Reconsideration</h3>
-      <p>A ruling may be reconsidered only on genuinely new and materially relevant evidence, under the same standard as 5.10.</p>
-    </section>
-
-    <section id="inactive">
-      <div class="art-head"><span class="art-num">7</span><h2 class="art-title">Inactive Managers &amp; Abandoned Teams</h2></div>
-
-      <h3><span class="clause">7.1</span>Lineup Obligation</h3>
-      <p>Every manager must set a legal lineup each week. Starting players known to be on bye, inactive, or out, or leaving slots empty, is a failure to meet this obligation.</p>
-
-      <h3><span class="clause">7.2</span>Abandonment</h3>
-      <p>A team is considered abandoned when its manager fails to meet 7.1 for two consecutive weeks, or does not respond to the head commissioner within 72 hours of being contacted about their team.</p>
-
-      <h3><span class="clause">7.3</span>Commissioner Management</h3>
-      <p>For the sake of league integrity, the head commissioner will set the lineup of an abandoned team. If the abandoned team is playing the head commissioner that week, the co-commissioner (aversioneer) sets its lineup instead.</p>
-      <p>The commissioner managing the team:</p>
-      <ul>
-        <li>Sets only a legal, reasonable lineup from the existing roster.</li>
-        <li>Does not make trades.</li>
-        <li>Makes waiver moves only to replace players who are out for the season.</li>
-      </ul>
-
-      <h3><span class="clause">7.4</span>Relationship to Corrections</h3>
-      <p>Commissioner management of an abandoned team is not a retroactive correction and does not create eligibility under Article 5. A manager who simply forgot to set a lineup is not abandoned and is not covered by this article.</p>
-
-      <h3><span class="clause">7.5</span>Resuming Control</h3>
-      <p>A manager may resume control of their team at any time by contacting the head commissioner.</p>
+      <h3><span class="clause">12.4</span>Precedent</h3>
+      <p>Rulings on situations not covered by this charter should be posted to the league Discord. If the situation is likely to come up again, it should be added as a formal rule through Article 13.</p>
     </section>
 
     <section id="proposals">
-      <div class="art-head"><span class="art-num">8</span><h2 class="art-title">Rule Proposals &amp; League Votes</h2></div>
+      <div class="art-head"><span class="art-num">13</span><h2 class="art-title">Rule Proposals &amp; League Votes</h2></div>
 
-      <h3><span class="clause">8.1</span>Proposals</h3>
+      <h3><span class="clause">13.1</span>Proposals</h3>
       <p>Any manager may propose a new rule or a change to an existing rule. A proposal must include a complete, in-depth written draft of the rule, comparable in form to the rules in this charter. Proposals without a written draft will not be put to a vote.</p>
 
-      <h3><span class="clause">8.2</span>Voting</h3>
+      <h3><span class="clause">13.2</span>Voting</h3>
       <p>All managers except the head commissioner may vote on a proposal. A proposal passes the vote with a majority of eligible managers (5 of 9), not a unanimous decision. Votes are held in the league Discord and remain open for 72 hours unless all eligible managers vote sooner.</p>
 
-      <h3><span class="clause">8.3</span>Head Commissioner Ruling</h3>
+      <h3><span class="clause">13.3</span>Head Commissioner Ruling</h3>
       <p>The head commissioner (Twinss167) holds the final ruling on any proposal that passes the vote and may approve or veto it. A vetoed proposal does not take effect.</p>
 
-      <h3><span class="clause">8.4</span>Effective Date</h3>
+      <h3><span class="clause">13.4</span>Effective Date</h3>
       <p>An approved rule takes effect immediately, unless it changes scoring, roster, playoff, or payout settings. Those changes take effect the following season.</p>
 
-      <h3><span class="clause">8.5</span>Records</h3>
+      <h3><span class="clause">13.5</span>Records</h3>
       <p>The head commissioner will add every approved rule to this charter. The Discord vote serves as the official record of the league's decision.</p>
     </section>
-
-    <section id="authority">
-      <div class="art-head"><span class="art-num">9</span><h2 class="art-title">Commissioner Authority &amp; Disputes</h2></div>
-
-      <h3><span class="clause">9.1</span>General Authority</h3>
-      <p>The head commissioner has authority to rule on any situation not addressed by this charter. Rulings must be consistent with the charter's intent and applied equally to all managers.</p>
-
-      <h3><span class="clause">9.2</span>Conflicts of Interest</h3>
-      <p>When a ruling directly affects the head commissioner's own team, the co-commissioner decides. When it directly affects both commissioners' teams, a league vote of unaffected managers decides by majority.</p>
-
-      <h3><span class="clause">9.3</span>Disputes</h3>
-      <p>A manager who disagrees with a ruling may raise it with the head commissioner within 7 days. A ruling may be reconsidered only on genuinely new and materially relevant evidence, under the same standard as 5.10. Disagreement with a discretionary ruling does not by itself justify reversal.</p>
-
-      <h3><span class="clause">9.4</span>Precedent</h3>
-      <p>Rulings on situations not covered by this charter should be posted to the league Discord. If the situation is likely to come up again, it should be added as a formal rule through Article 8.</p>
-    </section>
-
-    <section id="stats">
-      <div class="art-head"><span class="art-num">10</span><h2 class="art-title">Stat Corrections</h2></div>
-
-      <h3><span class="clause">10.1</span>Official Stats</h3>
-      <p>All scoring is based on Sleeper's official stats, including any stat corrections Sleeper applies.</p>
-
-      <h3><span class="clause">10.2</span>Finality</h3>
-      <p>A matchup result is final once Sleeper finalizes it. Results changed by an official stat correction before finalization stand, even if they change the winner.</p>
-
-      <h3><span class="clause">10.3</span>No Manual Adjustments</h3>
-      <p>The head commissioner will not manually adjust scores, except to fix an administrative error under 5.1.2.</p>
-    </section>
-
-    <section id="draft">
-      <div class="art-head"><span class="art-num">11</span><h2 class="art-title">Draft</h2></div>
-
-      <h3><span class="clause">11.1</span>Draft Order</h3>
-      <p>The inaugural 2026 draft order was randomized. Every season after that, the draft order is the reverse of the previous season's final standings, with last place drafting first. The Toilet Bowl loser picks 1st, followed by the rest of the Toilet Bowl teams by finish, then the playoff teams by finish, with the champion picking 10th.</p>
-
-      <h3><span class="clause">11.2</span>Format</h3>
-      <p>The draft is a snake draft. The pick order reverses each round, so the manager who picks last in one round picks first in the next.</p>
-
-      <h3><span class="clause">11.3</span>Absent Managers</h3>
-      <p>If a manager is not present when it is their turn, Sleeper's autodraft makes their picks. Picks made by autodraft stand.</p>
-
-      <h3><span class="clause">11.4</span>Draft Pick Trading</h3>
-      <p>Draft picks may never be traded, in any season, for the integrity of the league.</p>
-    </section>
+  </div>
 
   </main>
 </div>
